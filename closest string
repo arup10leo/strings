@@ -1,0 +1,19 @@
+class Solution{
+public:	
+	
+	int shortestDistance(vector<string> &s, string word1, string word2)
+	{
+		// Your code goes here
+		
+        int x,y;
+        int mini=INT_MAX;
+		for(int i=0;i<s.size();i++){
+		    m[s[i]]=i;
+		     if(s[i]==word1) x=i;
+		     if(s[i]==word2) y=i;
+		     mini=min(mini,abs(x-y));
+		    
+		}
+		return mini;
+	}
+};
