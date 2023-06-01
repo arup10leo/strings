@@ -1,0 +1,25 @@
+class Solution {
+public:
+    vector<string> removeAnagrams(vector<string>& words) {
+        string w,ww;
+        
+        
+        int i=0;
+        while(i<words.size()-1){
+            w=words[i];
+            ww=words[i+1];
+            sort(w.begin(),w.end());
+            sort(ww.begin(),ww.end());
+
+            if(w==ww) {
+            words.erase(words.begin()+i+1); 
+            }
+            else{
+                i++;
+                }
+        
+            
+        }
+        return words;
+    }
+};
