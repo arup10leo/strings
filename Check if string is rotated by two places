@@ -1,0 +1,20 @@
+ bool isRotated(string s1, string str2)
+    {
+        if(s1.length()!=str2.length())
+         return 0;
+        if(s1.length()==1)
+         return 0;
+        
+        string ss=s1;
+        reverse(s1.begin(),s1.begin()+2);
+        reverse(s1.begin()+2,s1.end());
+        reverse(s1.begin(),s1.end());
+        
+        reverse(ss.begin(),ss.end()-2);
+        reverse(ss.end()-2,ss.end());
+        reverse(ss.begin(),ss.end());
+        
+        return s1==str2 or ss==str2;
+    }
+
+};
