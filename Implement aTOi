@@ -1,0 +1,22 @@
+class Solution {
+public:
+    int myAtoi(string str) {
+        int s=0;
+        int i=0;
+        char ss=str[0];
+        if(str[0]=='-') ;
+        while(i<str.length()){
+            if(str[i]>='0' and str[i]<='9' or (str[0]=='-')){
+                if(str[0]=='-') str[0]='0';
+                 int k=str[i]-'0';
+                s=k+s*10;
+               
+            }
+           
+            else return -1;
+            i++;
+        }
+        if(ss=='-') return -1*s;
+        return s;
+    }
+};
