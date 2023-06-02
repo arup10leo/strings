@@ -1,0 +1,13 @@
+ string concatenatedString(string s1, string s2) 
+    { 
+        // Your code here
+        
+        unordered_map<char,int> c1,c2;
+        for(char c: s1) c1[c]++;
+        for(char c: s2) c2[c]++;
+        string ans="";
+        for(char c: s1) if(!c2[c])  ans+=c;
+        for(char c: s2) if(!c1[c])  ans+=c;
+        return ans==""?"-1":ans;
+    }
+    
